@@ -31,12 +31,13 @@ const Projects = () => {
     ? projectsData.slice(0, visibleProjects)
     : projectsData;
 
-  // Animations
-  const fadeIn = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translate(0)' : 'translate(50px)',
-    delay: 300,
-  });
+  // Unified animations
+  const fadeIn = (delay = 0) =>
+    useSpring({
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translate(0)' : 'translate(50px)',
+      delay,
+    });
 
   const projectsTrail = useTrail(projectsToShow.length, {
     opacity: 1,
@@ -47,10 +48,13 @@ const Projects = () => {
   return (
     <section id="projects" className="Projects padded-section" ref={sectionRef}>
       <div className="projects-title-container">
-        <animated.h1 className="section-title projects-title" style={fadeIn}>
+        <animated.h1
+          className="section-title projects-title"
+          style={fadeIn(300)}
+        >
           Projects
         </animated.h1>
-        <animated.div className="projects-underline" style={fadeIn} />
+        <animated.div className="projects-underline" style={fadeIn(600)} />
       </div>
 
       <div className="projects-container">
