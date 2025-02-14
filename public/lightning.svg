@@ -1,0 +1,4 @@
+<svg viewBox="0 0 16 16" preserveAspectRatio="none" class="lightning-bolt flicker">
+  <path class="lightning-bolt flicker" fill="none" stroke="gold" stroke-width=".25" d="M7 2v11h3v9l7-12h-4l4-8z" stroke-dasharray="59.83671569824219"></path>
+  <path fill="none" stroke="yellow" stroke-width=".25" d="M7 2v11h3v9l7-12h-4l4-8z" style="stroke-dashoffset: 0; opacity: 1;" stroke-dasharray="59.83671569824219"></path>
+</svg>
