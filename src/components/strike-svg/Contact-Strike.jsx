@@ -59,16 +59,16 @@ const Wrapper = styled.div`
     stroke-dasharray: ${(props) => props.pathLength};
     stroke-dashoffset: ${(props) => props.pathLength};
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px;
     height: auto;
     position: absolute;
-    transform: translate(-8%, -15%) rotate(65deg);
+    transform: translate(-8%, -20%) rotate(65deg);
     z-index: 0;
     top: 15vh;
   }
 
   .contact-animated-two {
-    top: 15.5vh;
+    top: 17vh;
   }
 
   .contact-animated.visible,
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
   @media screen and (min-width: 900px) {
     .contact-animated,
     .contact-animated-two {
-      transform: translate(-8%, -20%) rotate(65deg);
+      transform: translate(-8%, -25%) rotate(65deg);
   }
 `;
 
