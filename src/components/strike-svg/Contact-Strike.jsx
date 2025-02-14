@@ -64,11 +64,6 @@ const Wrapper = styled.div`
     position: absolute;
     transform: translate(-8%, -20%) rotate(65deg);
     z-index: 0;
-    top: 15vh;
-  }
-
-  .contact-animated-two {
-    top: 16vh;
   }
 
   .contact-animated.visible,
@@ -88,15 +83,22 @@ const Wrapper = styled.div`
   /* Portrait and Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .contact-animated {
-    top: 17vh;
+    top: 19vh;
   }
 
   .contact-animated-two {
-    top: 18vh;
+    top: 20vh;
   }
 }
 
   @media screen and (min-width: 900px) {
+    .contact-animated {
+      top: 15vh;
+    }
+    .contact-animated-two {
+      top: 16vh;
+    }
+
     .contact-animated,
     .contact-animated-two {
       transform: translate(-8%, -25%) rotate(65deg);
