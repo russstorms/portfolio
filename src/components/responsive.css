@@ -1,0 +1,142 @@
+/* iPhone 6/7/8 */
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  .profile-pic-bg {
+    height: 320px;
+    width: 240px;
+    top: 99px;
+    left: 12px;
+  }
+
+  .nav-wrapper {
+    min-height: 66px;
+  }
+  .profile-pic {
+    max-width: 240px;
+  }
+
+  section.padded-section {
+    max-width: 370px;
+    padding: 25px 10px 10px 10px;
+  }
+
+  .about-padded-section {
+    max-width: 600px;
+  }
+  .clipped-nav {
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .clipped-nav .nav-link {
+    padding: 0;
+  }
+
+  .about-info-container {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .Skills-List {
+    padding: 0;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+  }
+  .skills-list div {
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .profile-pic {
+    max-width: 320px;
+  }
+  .profile-pic-bg {
+    height: 426px;
+    width: 320px;
+    top: 100px;
+    left: 13px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .clipped-nav {
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
+  }
+
+  .about-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic-bg {
+    height: 426px;
+    width: 320px;
+    top: 175px;
+    left: 153px;
+  }
+}
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+  /* Nav */
+  .nav-wrapper {
+    min-height: 66px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .profile-pic-bg {
+    height: 426px;
+    width: 320px;
+    top: 175px;
+    left: 22px;
+  }
+  /* About Section */
+  .about-container {
+    flex-direction: row;
+  }
+
+  .about-info-container {
+    flex-direction: row;
+  }
+
+  .about-side-container {
+    display: block;
+  }
+
+  .Skills-List-Container,
+  .about-btn-container {
+    display: block;
+  }
+
+  .intro-titles {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about-info-container {
+    flex-basis: 100%;
+  }
+  .about-p-container {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  section.padded-section {
+    padding: 100px 150px;
+  }
+
+  .profile-pic-bg {
+    height: 426px;
+    width: 320px;
+    top: 175px;
+    left: 152px;
+  }
+}

@@ -1,0 +1,56 @@
+.Contact {
+  position: relative;
+  padding: 50px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #141414;
+  overflow: hidden;
+}
+
+.contact-title-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0px;
+  width: 150px;
+}
+.contact-underline {
+  height: 3px;
+  background-color: #4682b4;
+}
+
+.contact-btn-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.contact-btn {
+  width: 100px;
+  padding: 5px 25px;
+  margin: 5px;
+  background: transparent;
+  border: 2px solid #ffd700;
+  transition: 0.3s ease-in-out;
+}
+.contact-btn:hover {
+  background-color: #ffd700;
+  cursor: pointer;
+}
+.contact-btn:hover .github-icon,
+.contact-btn:hover .linkedin-icon {
+  color: #141414;
+}
+
+.github-icon,
+.linkedin-icon {
+  color: #ffd700;
+  transition: 0.3s ease-in-out !important;
+}
+
+.contact-lightning-strike {
+  position: absolute;
+  top: -100%;
+  left: -15%;
+  z-index: 0;
+  transform: rotate(-122deg) scaleX(-1);
+}

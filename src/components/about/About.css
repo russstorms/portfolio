@@ -1,0 +1,68 @@
+.About {
+  background-color: #141414;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-title-container {
+  width: 110px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+
+.about-info-container {
+  display: flex;
+  padding: 0;
+  z-index: 2;
+}
+
+.about-paragraph {
+  font-size: 1.2em;
+  max-width: 600px; /* Optional: Prevents excessive width */
+  margin: 0 auto; /* Centers block element */
+}
+
+.about-side {
+  z-index: 1;
+  flex-basis: 100%;
+}
+
+.profile-pic {
+  max-width: 250px;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  height: auto;
+}
+
+.profile-pic-bg {
+  width: 320px;
+  height: 427px;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  position: absolute;
+  left: 152px;
+  bottom: 444px;
+  background-color: gold;
+  z-index: -1;
+}
+
+.about-underline {
+  height: 3px;
+  background-color: #4682b4;
+}
+
+.script-box {
+  will-change: width, height, left, top;
+  position: relative;
+}
+
+.about-p-container {
+  padding: 20px 0;
+}
+
+.about-paragraph {
+  padding: 8px 0;
+}

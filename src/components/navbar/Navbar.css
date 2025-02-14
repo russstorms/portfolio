@@ -1,0 +1,36 @@
+.nav-wrapper {
+  min-height: 128px;
+}
+
+.nav-neon-border {
+  border-top: 2px solid #ffd700;
+}
+
+.clipped-nav {
+  border-top: 5px solid #4682b4;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  cursor: pointer;
+  color: #4682b4;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-link {
+  padding: 0 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  color: #000000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
