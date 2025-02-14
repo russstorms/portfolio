@@ -1,5 +1,6 @@
 .Splash {
   font-family: sans-serif;
+  position: relative;
 }
 
 .lightning-bolt,
@@ -7,42 +8,91 @@
   will-change: transform, opacity;
   height: auto;
   position: absolute;
-  max-width: 110px;
-  top: 49%;
-  left: 51%;
-  transform: translate(15%, -130%) rotate(45deg); /* Center and rotate */
-  z-index: 1;
+  max-width: 120px;
+  top: 37%;
+  left: 0%;
+  transform: translate(70px, -120px) rotate(45deg);
 }
 
 .lightning-bolt-two {
-  max-width: 105px;
-  transform: translate(15%, -135%) rotate(45deg); /* Same centering */
+  max-width: 115px;
+  transform: translate(70px, -122px) rotate(45deg);
+}
+
+@media only screen and (min-width: 300px) {
+  .lightning-bolt {
+    max-width: 100px;
+    transform: translate(90px, -107px) rotate(45deg);
+  }
+  .lightning-bolt-two {
+    max-width: 95px;
+    transform: translate(90px, -107px) rotate(45deg);
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .lightning-bolt {
+    max-width: 105px;
+    transform: translate(110px, -107px) rotate(45deg);
+  }
+  .lightning-bolt-two {
+    max-width: 100px;
+    transform: translate(110px, -107px) rotate(45deg);
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .lightning-bolt {
-    max-width: 120px;
+    max-width: 130px;
+    transform: translate(140px, -130px) rotate(45deg);
   }
   .lightning-bolt-two {
-    max-width: 115px;
+    max-width: 125px;
+    transform: translate(140px, -132px) rotate(45deg);
   }
 }
 
 @media only screen and (min-width: 992px) {
   .lightning-bolt {
-    max-width: 120px;
+    max-width: 140px;
+    transform: translate(150px, -137px) rotate(45deg);
   }
   .lightning-bolt-two {
-    max-width: 115px;
+    max-width: 135px;
+    transform: translate(150px, -139px) rotate(45deg);
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-height: 750px) {
   .lightning-bolt {
     max-width: 130px;
+    transform: translate(130px, -130px) rotate(45deg);
   }
   .lightning-bolt-two {
     max-width: 125px;
+    transform: translate(130px, -132px) rotate(45deg);
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-height: 600px) {
+  .lightning-bolt {
+    max-width: 130px;
+    transform: translate(110px, -130px) rotate(45deg);
+  }
+  .lightning-bolt-two {
+    max-width: 125px;
+    transform: translate(110px, -132px) rotate(45deg);
+  }
+}
+
+@media only screen and (min-width: 1100px) and (min-height: 680px) {
+  .lightning-bolt {
+    max-width: 130px;
+    transform: translate(125px, -130px) rotate(45deg);
+  }
+  .lightning-bolt-two {
+    max-width: 125px;
+    transform: translate(125px, -132px) rotate(45deg);
   }
 }
 
