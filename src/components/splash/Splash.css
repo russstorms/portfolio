@@ -96,6 +96,15 @@
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .lightning-bolt {
+    transform: translate(70px, -120px) rotate(45deg) !important;
+  }
+  .lightning-bolt-two {
+    transform: translate(70px, -120px) rotate(45deg) !important;
+  }
+}
+
 .flicker {
   animation: flicker 4s ease infinite;
 }
