@@ -23,6 +23,18 @@
   transform: rotate(45deg) translate(33px, 11px);
 }
 
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .lightning-bolt {
+    max-width: 100px;
+    transform: rotate(45deg) translate(28px, 9px);
+  }
+
+  .lightning-bolt-two {
+    max-width: 95px;
+    transform: rotate(45deg) translate(24px, 8px);
+  }
+}
+
 @media screen and (min-width: 350px) and (max-width: 750px) {
   .lightning-bolt {
     max-width: 100px;
