@@ -1,8 +1,7 @@
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: none;
   user-select: none;
-  width: 100vw;
 }
 
 .App {
@@ -43,7 +42,7 @@ body {
   }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 435px) {
   .App,
   html,
   body {
