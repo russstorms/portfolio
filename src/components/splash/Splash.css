@@ -28,12 +28,12 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .lightning-bolt {
     max-width: 100px;
-    transform: rotate(90deg) translate(28px, 9px);
+    transform: rotate(45deg) translate(20px, 0px);
   }
 
   .lightning-bolt-two {
     max-width: 95px;
-    transform: rotate(90deg) translate(24px, 8px);
+    transform: rotate(45deg) translate(15px, 3px);
   }
 }
 
