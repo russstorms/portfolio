@@ -4,27 +4,23 @@
 
 .lightning-bolt {
   will-change: transform, opacity;
-  max-width: 105px;
   height: auto;
   position: absolute;
   position-anchor: --tooltip;
   position-area: top right;
   z-index: 1;
-  transform: rotate(45deg) translate(31px, 8px);
 }
 
 .lightning-bolt-two {
   will-change: transform, opacity;
-  max-width: 100px;
   height: auto;
   position: absolute;
   position-anchor: --tooltip;
   position-area: top right;
-  transform: rotate(45deg) translate(28px, 6px);
 }
 
 /* Portrait and Landscape */
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .lightning-bolt {
     max-width: 100px;
     transform: rotate(45deg) translate(28px, 9px);
@@ -56,7 +52,7 @@
   .lightning-bolt-two {
     transform: rotate(45deg) translate(32px, 5px);
   }
-} */
+}
 
 .flicker {
   animation: flicker 4s ease infinite;
