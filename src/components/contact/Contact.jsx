@@ -41,7 +41,7 @@ const Contact = () => {
           {[
             {
               icon: <GitHub />,
-              link: 'https://github.com/rstorms90',
+              link: 'https://github.com/russstorms',
               label: 'Github',
             },
             {
