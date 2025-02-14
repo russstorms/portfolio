@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import profilePic from '../../images/profilePic.jpg';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import profilePic from '../../images/profilePic.jpg';
 
 import Strike from '../strike-svg/Strike';
 import SkillsList from './SkillsList';
@@ -12,88 +12,64 @@ const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(
+        ([entry]) => setIsVisible(entry.isIntersecting),
+        { threshold: 0.2 }
+      ),
+    []
+  );
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.2 }
-    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [observer]);
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  // Animate styles
-  const titleStyle = useSpring({
-    transform: isVisible ? 'translate(0px)' : 'translate(-50px)',
-    opacity: isVisible ? 1 : 0,
-    delay: 300,
-  });
-
-  const underlineStyle = useSpring({
-    transform: isVisible ? 'translate(0px)' : 'translate(-50px)',
-    opacity: isVisible ? 1 : 0,
-    delay: 600,
-  });
-
-  const profilePicStyle = useSpring({
-    opacity: isVisible ? 1 : 0,
-    delay: 1000,
-  });
-
-  const paragraphStyle = useSpring({
-    opacity: isVisible ? 1 : 0,
-    delay: 500,
-  });
-
-  const aboutSideStyle = useSpring({
-    opacity: isVisible ? 1 : 0,
-    delay: 500,
-  });
+  // Unified animations
+  const fadeIn = (delay = 0) =>
+    useSpring({
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translateX(0px)' : 'translateX(-50px)',
+      delay,
+    });
 
   return (
     <section id="about" className="About padded-section" ref={sectionRef}>
       <Strike />
+
       <div className="about-title-container">
-        <animated.div style={titleStyle}>
-          <h1 className="section-title">About</h1>
-        </animated.div>
-        <animated.div className="about-underline" style={underlineStyle} />
+        <animated.h1 className="section-title" style={fadeIn(300)}>
+          About
+        </animated.h1>
+        <animated.div className="about-underline" style={fadeIn(600)} />
       </div>
+
       <div className="about-container">
         <article className="about-info-container">
           <img
-            style={profilePicStyle}
             className="profile-pic"
             src={profilePic}
             alt="me"
+            style={fadeIn(1000)}
           />
           <div className="profile-pic-bg"></div>
+
           <div className="about-p-container">
-            <p style={paragraphStyle} className="about-paragraph">
-              Hey! I'm Russ. I found my passion for UI and tech as a kid filming
-              and editing skateboarding videos with my brother.
-            </p>
-            <p style={paragraphStyle} className="about-paragraph">
-              I'm a big climber, fan of outdoor activities, and spending time
-              with my other half and our little pup!
-            </p>
-            <p style={paragraphStyle} className="about-paragraph">
-              I am a detail-oriented person and enjoy working on ambitious
-              projects with a great team.
-            </p>
+            {[
+              "Hey! I'm Russ. I found my passion for UI and tech as a kid filming and editing skateboarding videos with my brother.",
+              "I'm a big climber, fan of outdoor activities, and spending time with my other half and our little pup!",
+              'I am a detail-oriented person and enjoy working on ambitious projects with a great team.',
+            ].map((text, index) => (
+              <p key={index} className="about-paragraph" style={fadeIn(500)}>
+                {text}
+              </p>
+            ))}
           </div>
         </article>
       </div>
-      <div style={aboutSideStyle} className="about-side">
+
+      <div className="about-side">
         <SkillsList />
       </div>
     </section>

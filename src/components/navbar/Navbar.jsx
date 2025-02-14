@@ -1,45 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { scrollToSection } from '../../helpers/scrollToSection';
-
 import './Navbar.css';
 
+const NAV_LINKS = [
+  { label: 'Home', section: 'home' },
+  { label: 'About', section: 'about' },
+  { label: 'Portfolio', section: 'projects' },
+  { label: 'Contact', section: 'contact' },
+];
+
 const Navbar = () => {
+  const navbarRef = useRef(null);
+
   useEffect(() => {
-    const navbar = document.getElementById('navbar');
-    const sticky = navbar.offsetTop;
+    const navbar = navbarRef.current;
+    if (!navbar) return;
 
     const handleScroll = () => {
-      if (window.scrollY > sticky) {
-        navbar.classList.add('sticky');
-      } else {
-        navbar.classList.remove('sticky');
-      }
+      navbar.classList.toggle('sticky', window.scrollY > navbar.offsetTop);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="nav-wrapper">
-      <section className="Navbar" id="navbar">
+      <section className="Navbar" id="navbar" ref={navbarRef}>
         <div className="nav-neon-border" />
         <nav className="clipped-nav">
-          <h4 className="nav-link" onClick={() => scrollToSection('home')}>
-            Home
-          </h4>
-          <h4 className="nav-link" onClick={() => scrollToSection('about')}>
-            About
-          </h4>
-          <h4 className="nav-link" onClick={() => scrollToSection('projects')}>
-            Portfolio
-          </h4>
-          <h4 className="nav-link" onClick={() => scrollToSection('contact')}>
-            Contact
-          </h4>
+          {NAV_LINKS.map(({ label, section }) => (
+            <h4
+              key={section}
+              className="nav-link"
+              onClick={() => scrollToSection(section)}
+            >
+              {label}
+            </h4>
+          ))}
         </nav>
       </section>
     </div>

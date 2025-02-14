@@ -4,32 +4,34 @@ import { useSpring, animated } from '@react-spring/web';
 import './Project.css';
 
 const Project = ({ project }) => {
-  const [{ y, color }, set] = useSpring(() => ({ y: 100 }));
+  const animation = useSpring({
+    y: 100,
+    from: { y: 100 },
+  });
 
   return (
     <div
       className="project"
-      onMouseEnter={() => set({ y: 0 })}
-      onMouseLeave={() => set({ y: 100 })}
+      onMouseEnter={() => animation.y.start(0)}
+      onMouseLeave={() => animation.y.start(100)}
     >
       <img
         className="project-image"
-        src={`${project.imageSrc}`}
-        alt="project"
+        src={project.imageSrc}
+        alt={project.title}
       />
 
       <animated.div
-        style={{ transform: y.to((v) => `translateY(${v}%`) }}
         className="overlay"
+        style={{ transform: animation.y.to((v) => `translateY(${v}%)`) }}
       >
-        <animated.span className="project-text" style={{ color }}>
+        <div className="project-text">
           <h5 className="project-name">{project.title}</h5>
-          {project.subTitle !== '' && <p>{project.subTitle}</p>}
-          {project.url !== '' ? (
+          {project.subTitle && <p>{project.subTitle}</p>}
+          {project.url ? (
             <a
               className="project-btn"
-              href={`${project.url}`}
-              alt=""
+              href={project.url}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -39,7 +41,7 @@ const Project = ({ project }) => {
             <p className="no-link">(Not Hosted)</p>
           )}
           <p className="project-description">{project.description}</p>
-        </animated.span>
+        </div>
       </animated.div>
     </div>
   );

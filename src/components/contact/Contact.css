@@ -36,13 +36,12 @@
   background-color: #ffd700;
   cursor: pointer;
 }
-.contact-btn:hover .github-icon,
-.contact-btn:hover .linkedin-icon {
+.contact-btn:hover svg,
+.contact-btn:hover svg {
   color: #141414;
 }
 
-.github-icon,
-.linkedin-icon {
+.contact-btn svg {
   color: #ffd700;
   transition: 0.3s ease-in-out !important;
 }
