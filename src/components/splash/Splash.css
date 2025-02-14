@@ -9,6 +9,9 @@
   position-anchor: --tooltip;
   position-area: top right;
   z-index: 1;
+  max-width: 100px;
+  transform: rotate(45deg) translate(28px, 9px);
+  bottom: 0;
 }
 
 .lightning-bolt-two {
@@ -17,40 +20,49 @@
   position: absolute;
   position-anchor: --tooltip;
   position-area: top right;
+  max-width: 95px;
+  transform: rotate(45deg) translate(24px, 8px);
+  bottom: 0;
 }
 
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
   .lightning-bolt {
     max-width: 100px;
     transform: rotate(45deg) translate(28px, 9px);
-    bottom: 48vh;
+    bottom: 0;
   }
 
   .lightning-bolt-two {
     max-width: 95px;
     transform: rotate(45deg) translate(24px, 8px);
-    bottom: 48vh;
+    bottom: 0;
   }
 }
 
 @media screen and (min-width: 700px) {
   .lightning-bolt {
     max-width: 150px;
+    transform: rotate(45deg) translate(28px, 9px);
+    bottom: 0;
   }
 
   .lightning-bolt-two {
     max-width: 145px;
+    transform: rotate(45deg) translate(24px, 8px);
+    bottom: 0;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .lightning-bolt {
     transform: rotate(45deg) translate(37px, 6px);
+    bottom: 0;
   }
 
   .lightning-bolt-two {
     transform: rotate(45deg) translate(32px, 5px);
+    bottom: 0;
   }
 }
 
