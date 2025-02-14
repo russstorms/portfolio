@@ -85,6 +85,17 @@ const Wrapper = styled.div`
     }
   }
 
+  /* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contact-animated {
+    top: 17vh;
+  }
+
+  .contact-animated-two {
+    top: 18vh;
+  }
+}
+
   @media screen and (min-width: 900px) {
     .contact-animated,
     .contact-animated-two {
