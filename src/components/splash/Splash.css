@@ -26,12 +26,22 @@
 @media screen and (min-width: 350px) and (max-width: 600px) {
   .lightning-bolt {
     max-width: 100px;
-    transform: rotate(45deg) translate(23px, 15px);
+    transform: rotate(45deg) translate(28px, 9px);
   }
 
   .lightning-bolt-two {
     max-width: 95px;
-    transform: rotate(45deg) translate(19px, 13px);
+    transform: rotate(45deg) translate(24px, 8px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .lightning-bolt {
+    transform: rotate(45deg) translate(37px, 6px);
+  }
+
+  .lightning-bolt-two {
+    transform: rotate(45deg) translate(32px, 5px);
   }
 }
 

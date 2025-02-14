@@ -113,7 +113,8 @@ export const projectsData = [
     imageSrc:
       'https://res.cloudinary.com/rstorms90/image/upload/v1739419323/Screen_Shot_2025-02-12_at_11.00.01_PM_jvmtup.png',
     url: 'https://www.vail.com/',
-    description: 'Vail — Ski resort',
+    description:
+      'Vail: Colorado Ski Resort - World-class skiing and snowboarding | Like Nothing on Earth.',
   },
   {
     title: 'LifeSafer',

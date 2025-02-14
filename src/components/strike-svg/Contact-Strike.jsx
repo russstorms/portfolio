@@ -68,7 +68,7 @@ const Wrapper = styled.div`
   }
 
   .contact-animated-two {
-    top: 17vh;
+    top: 16vh;
   }
 
   .contact-animated.visible,
