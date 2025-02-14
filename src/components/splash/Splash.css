@@ -2,81 +2,47 @@
   font-family: sans-serif;
 }
 
-.lightning-bolt {
-  will-change: transform, opacity;
-  height: auto;
-  position: absolute;
-  position-anchor: --tooltip;
-  position-area: top right;
-  z-index: 1;
-  max-width: 100px;
-  transform: rotate(45deg) translate(28px, 9px);
-  bottom: 0;
-}
-
+.lightning-bolt,
 .lightning-bolt-two {
   will-change: transform, opacity;
   height: auto;
   position: absolute;
-  position-anchor: --tooltip;
-  position-area: top right;
-  max-width: 95px;
-  transform: rotate(45deg) translate(24px, 8px);
-  bottom: 0;
+  max-width: 110px;
+  top: 49%;
+  left: 51%;
+  transform: translate(15%, -130%) rotate(45deg); /* Center and rotate */
+  z-index: 1;
 }
 
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
-  .lightning-bolt {
-    max-width: 100px;
-    transform: rotate(45deg) translate(28px, 9px);
-    bottom: 48vh;
-  }
-
-  .lightning-bolt-two {
-    max-width: 95px;
-    transform: rotate(45deg) translate(24px, 8px);
-    bottom: 48vh;
-  }
+.lightning-bolt-two {
+  max-width: 105px;
+  transform: translate(15%, -135%) rotate(45deg); /* Same centering */
 }
 
-@media screen and (min-width: 376px) {
+@media only screen and (min-width: 768px) {
   .lightning-bolt {
-    max-width: 100px;
-    transform: rotate(45deg) translate(28px, 9px);
-    bottom: 0;
+    max-width: 120px;
   }
-
   .lightning-bolt-two {
-    max-width: 95px;
-    transform: rotate(45deg) translate(24px, 8px);
-    bottom: 0;
+    max-width: 115px;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media only screen and (min-width: 992px) {
   .lightning-bolt {
-    max-width: 150px;
-    transform: rotate(45deg) translate(28px, 9px);
-    bottom: 0;
+    max-width: 120px;
   }
-
   .lightning-bolt-two {
-    max-width: 145px;
-    transform: rotate(45deg) translate(24px, 8px);
-    bottom: 0;
+    max-width: 115px;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media only screen and (min-width: 1200px) {
   .lightning-bolt {
-    transform: rotate(45deg) translate(37px, 6px);
-    bottom: 0;
+    max-width: 130px;
   }
-
   .lightning-bolt-two {
-    transform: rotate(45deg) translate(32px, 5px);
-    bottom: 0;
+    max-width: 125px;
   }
 }
 
@@ -112,10 +78,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.anchor {
-  anchor-name: --tooltip;
 }
 
 .intro-first-name,

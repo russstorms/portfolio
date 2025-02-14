@@ -91,16 +91,8 @@ const Splash = () => {
         preserveAspectRatio="none"
         className={`lightning-bolt ${flicker ? 'flicker' : ''}`}
       >
-        <path
-          ref={lightningOne.pathRef}
-          className={`lightning-bolt ${flicker ? 'flicker' : ''}`}
-          strokeDasharray={lightningOne.pathLength}
-          fill="none"
-          stroke="gold"
-          strokeWidth=".25"
-          d="M7 2v11h3v9l7-12h-4l4-8z"
-        />
         <animated.path
+          ref={lightningOne.pathRef}
           style={lightningOne.pathSpring}
           strokeDasharray={lightningOne.pathLength}
           fill="none"
@@ -115,16 +107,8 @@ const Splash = () => {
         preserveAspectRatio="none"
         className={`lightning-bolt-two ${flicker ? 'flicker' : ''}`}
       >
-        <path
-          ref={lightningTwo.pathRef}
-          className={`lightning-bolt-two ${flicker ? 'flicker' : ''}`}
-          strokeDasharray={lightningTwo.pathLength}
-          fill="none"
-          stroke="gold"
-          strokeWidth=".5"
-          d="M7 2v11h3v9l7-12h-4l4-8z"
-        />
         <animated.path
+          ref={lightningTwo.pathRef}
           style={lightningTwo.pathSpring}
           strokeDasharray={lightningTwo.pathLength}
           fill="none"
@@ -148,7 +132,6 @@ const Splash = () => {
             </animated.div>
           ))}
         </div>
-        <span className="anchor" />
         <div className="intro-last-name">
           {lastNameSpring.map(({ x, height, ...rest }, index) => (
             <animated.div
