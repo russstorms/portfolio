@@ -2,12 +2,12 @@ html,
 body {
   overflow-x: hidden;
   user-select: none;
+  width: 100vw;
 }
 
 .App {
   color: #ffffff;
   background-color: #141414;
-  /* width: 390px; */
 }
 
 .App-header {
@@ -40,5 +40,13 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .App,
+  html,
+  body {
+    width: 100vw;
   }
 }
