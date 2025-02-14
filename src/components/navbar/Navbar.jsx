@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { scrollToSection } from '../../helpers/scrollToSection';
+
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -11,42 +12,31 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const navbarRef = useRef(null);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
     const navbar = navbarRef.current;
     if (!navbar) return;
 
+    const sticky = navbar.offsetTop;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Check scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > navbar.offsetTop) {
-        // Scrolling down and past navbar
-        setSticky(true);
-      } else if (
-        currentScrollY < lastScrollY &&
-        currentScrollY < navbar.offsetTop
-      ) {
-        // Scrolling up and within original position
-        setSticky(false);
+      if (window.scrollY > sticky) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
       }
-
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="nav-wrapper">
-      <section
-        className={`Navbar ${sticky ? 'sticky' : ''}`}
-        id="navbar"
-        ref={navbarRef}
-      >
+      <section className="Navbar" id="navbar" ref={navbarRef}>
         <div className="nav-neon-border" />
         <nav className="clipped-nav">
           {NAV_LINKS.map(({ label, section }) => (

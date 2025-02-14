@@ -28,13 +28,13 @@
   .lightning-bolt {
     max-width: 100px;
     transform: rotate(45deg) translate(28px, 9px);
-    bottom: 49vh;
+    bottom: 48vh;
   }
 
   .lightning-bolt-two {
     max-width: 95px;
     transform: rotate(45deg) translate(24px, 8px);
-    bottom: 49vh;
+    bottom: 48vh;
   }
 }
 
