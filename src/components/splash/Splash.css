@@ -6,7 +6,7 @@
   will-change: transform, opacity;
   max-width: 150px;
   height: auto;
-  position: fixed;
+  position: absolute;
   position-anchor: --tooltip;
   position-area: top right;
   z-index: 1;
@@ -17,7 +17,7 @@
   will-change: transform, opacity;
   max-width: 145px;
   height: auto;
-  position: fixed;
+  position: absolute;
   position-anchor: --tooltip;
   position-area: top right;
   transform: rotate(45deg) translate(33px, 11px);
