@@ -97,11 +97,12 @@
 }
 
 @supports (-webkit-touch-callout: none) {
-  .lightning-bolt {
-    transform: translate(70px, -120px) rotate(45deg) !important;
+  .lightning-bolt,
+  .lightning-bolt-two {
+    transform: translate(90px, -100px) rotate(45deg) !important;
   }
   .lightning-bolt-two {
-    transform: translate(70px, -120px) rotate(45deg) !important;
+    transform: translate(90px, -100px) rotate(45deg) !important;
   }
 }
 
