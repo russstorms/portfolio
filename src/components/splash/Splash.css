@@ -40,6 +40,20 @@
   }
 }
 
+@media screen and (min-width: 376px) {
+  .lightning-bolt {
+    max-width: 100px;
+    transform: rotate(45deg) translate(28px, 9px);
+    bottom: 0;
+  }
+
+  .lightning-bolt-two {
+    max-width: 95px;
+    transform: rotate(45deg) translate(24px, 8px);
+    bottom: 0;
+  }
+}
+
 @media screen and (min-width: 700px) {
   .lightning-bolt {
     max-width: 150px;
