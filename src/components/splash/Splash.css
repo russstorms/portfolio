@@ -85,14 +85,25 @@
   }
 }
 
-@media only screen and (min-width: 1100px) and (min-height: 680px) {
+@media only screen and (min-width: 1100px) and (min-height: 820px) {
   .lightning-bolt {
     max-width: 130px;
-    transform: translate(125px, -130px) rotate(45deg);
+    transform: translate(145px, -130px) rotate(45deg);
   }
   .lightning-bolt-two {
     max-width: 125px;
-    transform: translate(125px, -132px) rotate(45deg);
+    transform: translate(145px, -132px) rotate(45deg);
+  }
+}
+
+@media only screen and (min-width: 1100px) and (min-height: 950px) {
+  .lightning-bolt {
+    max-width: 130px;
+    transform: translate(160px, -130px) rotate(45deg);
+  }
+  .lightning-bolt-two {
+    max-width: 125px;
+    transform: translate(160px, -130px) rotate(45deg);
   }
 }
 
