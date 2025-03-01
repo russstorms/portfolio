@@ -9,122 +9,49 @@
   height: auto;
   position: absolute;
   max-width: 120px;
-  top: 37%;
-  left: 0%;
-  transform: translate(70px, -120px) rotate(45deg);
+  top: -15%;
+  transform: rotate(45deg);
+  right: calc(5% - 60px);
 }
 
 .lightning-bolt-two {
-  max-width: 115px;
-  transform: translate(70px, -122px) rotate(45deg);
-}
-
-@media only screen and (min-width: 300px) {
-  .lightning-bolt {
-    max-width: 100px;
-    transform: translate(90px, -107px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 95px;
-    transform: translate(90px, -107px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 420px) {
-  .lightning-bolt {
-    max-width: 105px;
-    transform: translate(110px, -107px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 100px;
-    transform: translate(110px, -107px) rotate(45deg);
-  }
+  top: -15.5%;
+  right: calc(8% - 60px);
 }
 
 @media only screen and (min-width: 768px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(140px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(140px, -132px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .lightning-bolt {
-    max-width: 140px;
-    transform: translate(150px, -137px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 135px;
-    transform: translate(150px, -139px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-height: 750px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(130px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(130px, -132px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-height: 600px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(110px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(110px, -132px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 1100px) and (min-height: 820px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(145px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(145px, -132px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 1100px) and (min-height: 950px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(160px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(160px, -130px) rotate(45deg);
-  }
-}
-
-@media only screen and (min-width: 1100px) and (min-height: 1050px) {
-  .lightning-bolt {
-    max-width: 130px;
-    transform: translate(175px, -130px) rotate(45deg);
-  }
-  .lightning-bolt-two {
-    max-width: 125px;
-    transform: translate(175px, -130px) rotate(45deg);
-  }
-}
-
-@supports (-webkit-touch-callout: none) {
   .lightning-bolt,
   .lightning-bolt-two {
-    transform: translate(85px, -105px) rotate(45deg) !important;
+    max-width: 150px;
+    right: calc(5% - 75px);
   }
+
   .lightning-bolt-two {
-    transform: translate(85px, -105px) rotate(45deg) !important;
+    top: -16.5%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .lightning-bolt,
+  .lightning-bolt-two {
+    top: -14%;
+    max-width: 160px;
+    right: calc(8% - 80px);
+  }
+
+  .lightning-bolt-two {
+    top: -16%;
+  }
+}
+
+@media only screen and (min-height: 950px) {
+  .lightning-bolt,
+  .lightning-bolt-two {
+    top: -10%;
+  }
+
+  .lightning-bolt-two {
+    top: -11.5%;
   }
 }
 
