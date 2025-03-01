@@ -9,6 +9,7 @@ import {
   DiNpm,
 } from 'react-icons/di';
 import {
+  SiJavascript,
   SiNextdotjs,
   SiHtml5,
   SiCss3,
@@ -21,6 +22,7 @@ import { TbBrandVercel } from 'react-icons/tb';
 export const Specialities = () => {
   const specialities = {
     front: [
+      { techName: 'Javascript', icon: <SiJavascript /> },
       { techName: 'React', icon: <DiReact /> },
       { techName: 'Typescript', icon: <BiLogoTypescript /> },
       { techName: 'Next', icon: <SiNextdotjs /> },
